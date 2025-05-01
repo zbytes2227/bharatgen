@@ -1,14 +1,40 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Growth: React.FC = () => {
-  const [financeGrowth, setFinanceGrowth] = useState(0);
-  const [customerCommunity, setCustomerCommunity] = useState(0);
-  const [projectsCompleted, setProjectsCompleted] = useState(0);
-  const [newTeammates, setNewTeammates] = useState(0);
+  const [financeGrowth, setFinanceGrowth] = useState<number>(0);
+  const [customerCommunity, setCustomerCommunity] = useState<number>(0);
+  const [projectsCompleted, setProjectsCompleted] = useState<number>(0);
+  const [newTeammates, setNewTeammates] = useState<number>(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing once visible
+        }
+      },
+      { threshold: 0.1 } // Trigger when 10% of the component is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return; // Only start counters when visible
+
     const duration = 2000; // 2 seconds
     const financeStep = 600 / (duration / 20); // Increment every 20ms
     const customerStep = 744 / (duration / 20);
@@ -37,10 +63,13 @@ const Growth: React.FC = () => {
       clearInterval(projectsTimer);
       clearInterval(teammateTimer);
     };
-  }, []);
+  }, [isVisible]);
 
   return (
-    <div className="bg-gradient-to-br from-teal-700 to-teal-900 text-gray-800 p-8 rounded-3xl m-8 shadow-md">
+    <div
+      ref={sectionRef}
+      className="bg-gradient-to-br from-teal-700 to-teal-900 text-gray-800 p-8 rounded-3xl m-8 shadow-md"
+    >
       <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-center text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-lime-300">
         Company Growth over Year
       </h2>

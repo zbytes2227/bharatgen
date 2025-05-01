@@ -40,8 +40,8 @@ const Growth: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-teal-700 text-gray-800 p-8 rounded-3xl m-8 shadow-md">
-      <h2 className="text-3xl md:text-4xl font-bold font-heading mb-8 text-center text-white animate-fade-in-down">
+    <div className="bg-gradient-to-br from-teal-700 to-teal-900 text-gray-800 p-8 rounded-3xl m-8 shadow-md">
+      <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-center text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-lime-300">
         Company Growth over Year
       </h2>
       <div className="flex justify-around items-center flex-wrap gap-6">
@@ -64,9 +64,7 @@ const Growth: React.FC = () => {
           <p className="text-3xl font-bold text-green-600">
             {Math.round(customerCommunity)}
           </p>
-          <p className="text-sm font-medium text-white">
-            customer community
-          </p>
+          <p className="text-sm font-medium text-white">customer community</p>
         </div>
 
         {/* Projects Completed */}
@@ -77,9 +75,7 @@ const Growth: React.FC = () => {
           <p className="text-3xl font-bold text-red-600">
             {Math.round(projectsCompleted)}
           </p>
-          <p className="text-sm font-medium text-white">
-            projects completed
-          </p>
+          <p className="text-sm font-medium text-white">projects completed</p>
         </div>
 
         {/* New Teammates */}

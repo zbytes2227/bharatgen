@@ -40,9 +40,9 @@ const Growth: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-inherit text-gray-800 p-8 rounded-3xl shadow-xl">
-      <h2 className="text-3xl md:text-4xl font-extrabold font-heading mb-8 text-center text-gray-900 animate-fade-in-down">
-        Company Growth in Year
+    <div className="bg-teal-700 text-gray-800 p-8 rounded-3xl m-8 shadow-md">
+      <h2 className="text-3xl md:text-4xl font-bold font-heading mb-8 text-center text-white animate-fade-in-down">
+        Company Growth over Year
       </h2>
       <div className="flex justify-around items-center flex-wrap gap-6">
         {/* Finance Growth */}
@@ -53,7 +53,7 @@ const Growth: React.FC = () => {
           <p className="text-3xl font-bold text-blue-600">
             {Math.round(financeGrowth)}%
           </p>
-          <p className="text-sm font-medium text-gray-600">finance growth</p>
+          <p className="text-sm font-medium text-white">finance growth</p>
         </div>
 
         {/* Customer Community */}
@@ -64,7 +64,7 @@ const Growth: React.FC = () => {
           <p className="text-3xl font-bold text-green-600">
             {Math.round(customerCommunity)}
           </p>
-          <p className="text-sm font-medium text-gray-600">
+          <p className="text-sm font-medium text-white">
             customer community
           </p>
         </div>
@@ -77,7 +77,7 @@ const Growth: React.FC = () => {
           <p className="text-3xl font-bold text-red-600">
             {Math.round(projectsCompleted)}
           </p>
-          <p className="text-sm font-medium text-gray-600">
+          <p className="text-sm font-medium text-white">
             projects completed
           </p>
         </div>
@@ -90,7 +90,7 @@ const Growth: React.FC = () => {
           <p className="text-3xl font-bold text-yellow-600">
             {Math.round(newTeammates)}
           </p>
-          <p className="text-sm font-medium text-gray-600">new teammates</p>
+          <p className="text-sm font-medium text-white">new teammates</p>
         </div>
       </div>
     </div>

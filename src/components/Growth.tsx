@@ -66,56 +66,58 @@ const Growth: React.FC = () => {
   }, [isVisible]);
 
   return (
-    <div
-      ref={sectionRef}
-      className="bg-gradient-to-br from-teal-700 to-teal-900 text-gray-800 p-8 rounded-3xl m-8 shadow-md"
-    >
-      <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-center text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-lime-300">
-        Company Growth over Year
-      </h2>
-      <div className="flex justify-around items-center flex-wrap gap-6">
-        {/* Finance Growth */}
-        <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-100">
-          <div className="w-28 h-28 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-3 shadow-md">
-            <span className="text-5xl">📈</span>
+    <div className="bg-white">
+      <div
+        ref={sectionRef}
+        className="bg-gradient-to-br from-teal-700 to-teal-900 text-gray-800 p-8 rounded-3xl m-8 shadow-md"
+      >
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-center text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-lime-300">
+          Company Growth over Year
+        </h2>
+        <div className="flex justify-around items-center flex-wrap gap-6">
+          {/* Finance Growth */}
+          <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-100">
+            <div className="w-28 h-28 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-3 shadow-md">
+              <span className="text-5xl">📈</span>
+            </div>
+            <p className="text-3xl font-bold text-blue-600">
+              {Math.round(financeGrowth)}%
+            </p>
+            <p className="text-sm font-medium text-white">finance growth</p>
           </div>
-          <p className="text-3xl font-bold text-blue-600">
-            {Math.round(financeGrowth)}%
-          </p>
-          <p className="text-sm font-medium text-white">finance growth</p>
-        </div>
 
-        {/* Customer Community */}
-        <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-200">
-          <div className="w-28 h-28 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-3 shadow-md">
-            <span className="text-5xl">👥</span>
+          {/* Customer Community */}
+          <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-200">
+            <div className="w-28 h-28 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-3 shadow-md">
+              <span className="text-5xl">👥</span>
+            </div>
+            <p className="text-3xl font-bold text-green-600">
+              {Math.round(customerCommunity)}
+            </p>
+            <p className="text-sm font-medium text-white">customer community</p>
           </div>
-          <p className="text-3xl font-bold text-green-600">
-            {Math.round(customerCommunity)}
-          </p>
-          <p className="text-sm font-medium text-white">customer community</p>
-        </div>
 
-        {/* Projects Completed */}
-        <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-300">
-          <div className="w-28 h-28 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mb-3 shadow-md">
-            <span className="text-5xl">💼</span>
+          {/* Projects Completed */}
+          <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-300">
+            <div className="w-28 h-28 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mb-3 shadow-md">
+              <span className="text-5xl">💼</span>
+            </div>
+            <p className="text-3xl font-bold text-red-600">
+              {Math.round(projectsCompleted)}
+            </p>
+            <p className="text-sm font-medium text-white">projects completed</p>
           </div>
-          <p className="text-3xl font-bold text-red-600">
-            {Math.round(projectsCompleted)}
-          </p>
-          <p className="text-sm font-medium text-white">projects completed</p>
-        </div>
 
-        {/* New Teammates */}
-        <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-400">
-          <div className="w-28 h-28 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-3 shadow-md">
-            <span className="text-5xl">💪</span>
+          {/* New Teammates */}
+          <div className="flex flex-col items-center rounded-2xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up delay-400">
+            <div className="w-28 h-28 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-3 shadow-md">
+              <span className="text-5xl">💪</span>
+            </div>
+            <p className="text-3xl font-bold text-yellow-600">
+              {Math.round(newTeammates)}
+            </p>
+            <p className="text-sm font-medium text-white">new teammates</p>
           </div>
-          <p className="text-3xl font-bold text-yellow-600">
-            {Math.round(newTeammates)}
-          </p>
-          <p className="text-sm font-medium text-white">new teammates</p>
         </div>
       </div>
     </div>

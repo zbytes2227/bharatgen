@@ -36,15 +36,15 @@ export default function Page() {
             </span>
           </div>
           <Image
-            className="hidden md:block absolute top-0 left-0 mt-28 w-32 lg:w-64 xl:w-auto"
-            src="/quantam-assets/headers/header-4-left-top.png"
+            className="hidden md:block absolute rounded-2xl m-4 mr-8 z-10 top-0 left-0 mt-28 w-32 lg:w-64 xl:w-auto"
+            src="/quantam-assets/headers/header-photos-center-4.jpg"
             alt=""
             width={256}
             height={256}
           />
           <Image
-            className="hidden md:block absolute top-0 right-0 mt-20 w-32 lg:w-64 xl:w-auto"
-            src="/quantam-assets/headers/header-photos-center-4.png"
+            className="hidden md:block absolute rounded-2xl m-4 z-10 top-0 right-0 mt-20 w-32 lg:w-64 xl:w-auto"
+            src="/quantam-assets/headers/header-photos-center-3.jpg"
             alt=""
             width={256}
             height={256}
@@ -64,13 +64,13 @@ export default function Page() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center">
                 <a
-                  className="inline-flex py-4 px-6 mb-3 sm:mb-0 sm:mr-4 items-center justify-center text-lg font-medium text-white hover:text-white border border-teal-900 hover:border-gray-800 bg-teal-900 hover:bg-teal-700 rounded-full transition duration-200"
+                  className="inline-flex py-4 px-6 mb-3 sm:mb-12 sm:mr-4 items-center justify-center text-lg font-medium text-white hover:text-white border border-teal-900 hover:border-gray-800 bg-teal-900 hover:bg-teal-700 rounded-full transition duration-200"
                   href="/services"
                 >
                   See our solutions
                 </a>
                 <a
-                  className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-black hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
+                  className="inline-flex py-4 px-6 mb-8 sm:mb-12 items-center justify-center text-lg font-medium text-black hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
                   href="/contact"
                 >
                   Get in touch
@@ -78,7 +78,7 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Bottom Images */}
+            {/* Bottom Images 
             <div className="flex -mx-4 items-end relative">
               <div className="w-1/3 xs:w-1/2 lg:w-auto px-4">
                 <Image
@@ -92,7 +92,7 @@ export default function Page() {
               <div className="w-2/3 xs:w-1/2 lg:w-auto ml-auto px-4">
                 <Image
                   className="block w-1/2 md:w-64 lg:w-auto ml-auto"
-                  src="/quantam-assets/headers/header-4-bottom-right.png"
+                  src="/quantam-assets/headers/header-bottom.jpg"
                   alt=""
                   width={256}
                   height={128}
@@ -100,7 +100,7 @@ export default function Page() {
               </div>
 
               <div className="absolute bottom-0 left-0 w-full py-32 bg-gradient-to-t from-orange-50 to-transparent"></div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </main>

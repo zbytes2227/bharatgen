@@ -88,17 +88,17 @@ const Teams: React.FC = () => {
             {
               name: "Ujjwal Kushwaha",
               role: "Co-founder & Devlopment Head",
-              img: "quantam-assets/team/photo-worker-1.png",
+              img: "quantam-assets/team/photo-1.jpeg",
             },
             {
               name: "Manash Mishra",
               role: "Ceo & Founder",
-              img: "quantam-assets/team/photo-worker-2.png",
+              img: "quantam-assets/team/photo-2.jpeg",
             },
             {
               name: "Pankaj Kesharwani",
               role: "Co-founder & Management Head",
-              img: "quantam-assets/team/photo-worker-3.png",
+              img: "quantam-assets/team/photo-3.jpg",
             },
           ].map((member, index) => (
             <div

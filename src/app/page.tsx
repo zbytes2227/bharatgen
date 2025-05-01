@@ -106,8 +106,8 @@ export default function Page() {
       </main>
       <Services />
       <Teams />
-      <Growth />
       <Plansx />
+      <Growth />
       <Reviews />
       <Footer />
     </div>

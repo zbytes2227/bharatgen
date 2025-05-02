@@ -70,7 +70,7 @@ export default function Page() {
                   See our solutions
                 </a>
                 <a
-                  className="inline-flex py-4 px-6 mb-8 sm:mb-12 items-center justify-center text-lg font-medium text-black hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
+                  className="inline-flex py-4 px-6 mb-12 sm:mb-12 items-center justify-center text-lg font-medium text-black hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
                   href="/contact"
                 >
                   Get in touch
@@ -78,29 +78,29 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Bottom Images 
-            <div className="flex -mx-4 items-end relative">
+            {/* Bottom Images */}
+            <div className="hidden md:flex -mx-4 items-end relative">
               <div className="w-1/3 xs:w-1/2 lg:w-auto px-4">
                 <Image
-                  className="block h-32 lg:h-48"
-                  src="/quantam-assets/headers/header-4-bottom-lleft.png"
+                  className="hidden md:block rounded-2xl h-32 lg:h-52"
+                  src="/quantam-assets/headers/header-bottom-2.jpg"
                   alt=""
-                  width={128}
-                  height={128}
+                  width={340}
+                  height={300}
                 />
               </div>
               <div className="w-2/3 xs:w-1/2 lg:w-auto ml-auto px-4">
                 <Image
-                  className="block w-1/2 md:w-64 lg:w-auto ml-auto"
+                  className="hidden md:block rounded-2xl h-32 lg:h-80 ml-auto"
                   src="/quantam-assets/headers/header-bottom.jpg"
                   alt=""
-                  width={256}
+                  width={280}
                   height={128}
                 />
               </div>
 
               <div className="absolute bottom-0 left-0 w-full py-32 bg-gradient-to-t from-orange-50 to-transparent"></div>
-            </div>*/}
+            </div>
           </div>
         </div>
       </main>

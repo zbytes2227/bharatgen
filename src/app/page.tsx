@@ -36,14 +36,14 @@ export default function Page() {
             </span>
           </div>
           <Image
-            className="hidden md:block absolute rounded-2xl m-4 mr-8 z-10 top-0 left-0 mt-28 w-32 lg:w-64 xl:w-auto"
+            className="hidden md:block absolute rounded-2xl m-4 mr-8 z-10 top-0 left-0 mt-28 w-34 lg:w-68 xl:w-auto"
             src="/quantam-assets/headers/header-photos-center-4.jpg"
             alt=""
             width={256}
             height={256}
           />
           <Image
-            className="hidden md:block absolute rounded-2xl m-4 z-10 top-0 right-0 mt-20 w-32 lg:w-64 xl:w-auto"
+            className="hidden md:block absolute rounded-2xl m-4 z-10 top-0 right-0 mt-20 w-34 lg:w-68 xl:w-auto"
             src="/quantam-assets/headers/header-photos-center-3.jpg"
             alt=""
             width={256}
@@ -79,17 +79,17 @@ export default function Page() {
             </div>
 
             {/* Bottom Images */}
-            <div className="hidden md:flex -mx-4 items-end relative">
-              <div className="w-1/3 xs:w-1/2 lg:w-auto px-4">
+            <div className="hidden md:flex -mx-8 items-end relative">
+              <div className="w-1/3 xs:w-1/2 lg:w-auto px-18">
                 <Image
-                  className="hidden md:block rounded-2xl h-32 lg:h-52"
+                  className="hidden md:block rounded-2xl h-32 lg:h-50"
                   src="/quantam-assets/headers/header-bottom-2.jpg"
                   alt=""
                   width={340}
                   height={300}
                 />
               </div>
-              <div className="w-2/3 xs:w-1/2 lg:w-auto ml-auto px-4">
+              <div className="w-2/3 xs:w-1/2 lg:w-auto ml-auto px-12">
                 <Image
                   className="hidden md:block rounded-2xl h-32 lg:h-80 ml-auto"
                   src="/quantam-assets/headers/header-bottom.jpg"

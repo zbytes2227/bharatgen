@@ -3,10 +3,10 @@ import React from "react";
 const ProjectCards: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-200 flex flex-col items-center py-12 px-4">
-      <h1 className="text-5xl font-heading text-teal-700 mb-12 ">
+      <h1 className="text-5xl font-heading bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-teal-800 mb-12">
         Our Awesome Projects
       </h1>
-
+<br></br>
       {/* FGP College Official Website Card */}
       <div className="bg-white rounded-xl shadow-xl p-8 mb-10 w-full max-w-4xl transform transition-all hover:scale-105 hover:shadow-2xl">
         <h2 className="text-3xl font-bold text-blue-600 mb-5">

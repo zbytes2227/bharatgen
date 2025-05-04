@@ -67,7 +67,7 @@ const Services: React.FC = () => {
                     your audience and Our websites are designed to be
                     user-professional with our ERP solutions.
                   </p>
-                  <a href="/services">
+                  <a href="/webapp">
                     <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
                       Learn More
                     </button>
@@ -122,7 +122,7 @@ const Services: React.FC = () => {
                     requirements.We are committed to ensure
                     high-quality software development.
                   </p>
-                  <a href="/services">
+                  <a href="/software">
                     <button className="bg-gradient-to-r from-teal-600 to-teal-500 mb-4 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
                       Learn More
                     </button>

@@ -166,15 +166,15 @@ export default function Page() {
             </span>
           </div>
           <Image
-            className="hidden md:block absolute rounded-2xl m-4 z-10 top-0 left-0 mt-28 w-32 lg:w-64 xl:w-80"
-            src="/quantam-assets/headers/header-photos-center-4.jpg"
+            className="hidden md:block absolute z-10 top-0 left-0 mt-28 w-32 lg:w-64 xl:w-80"
+            src="/quantam-assets/headers/header-3.png"
             alt="Technology innovation"
             width={256}
             height={256}
           />
           <Image
-            className="hidden md:block absolute rounded-2xl m-4 z-10 top-0 right-0 mt-20 w-32 lg:w-64 xl:w-80"
-            src="/quantam-assets/headers/header-photos-center-3.jpg"
+            className="hidden md:block absolute z-10 top-0 right-0 mt-20 w-32 lg:w-64 xl:w-80"
+            src="/quantam-assets/headers/header-4.png"
             alt="Digital solutions"
             width={256}
             height={256}
@@ -212,7 +212,7 @@ export default function Page() {
             <div className="hidden md:flex relative -mx-4 items-end">
               <div className="w-1/3 px-4 lg:w-auto">
                 <Image
-                  className="rounded-2xl h-32 lg:h-48"
+                  className="rounded-2xl ml-8 h-32 lg:h-48"
                   src="/quantam-assets/headers/header-bottom-2.jpg"
                   alt="Team collaboration"
                   width={340}
@@ -221,7 +221,7 @@ export default function Page() {
               </div>
               <div className="w-2/3 ml-auto px-4 lg:w-auto">
                 <Image
-                  className="rounded-2xl h-32 lg:h-48 ml-auto"
+                  className="rounded-2xl mr-8 h-36 lg:h-64 ml-auto"
                   src="/quantam-assets/headers/header-bottom.jpg"
                   alt="Digital transformation"
                   width={280}

@@ -66,7 +66,7 @@ export default function Header(): React.ReactElement {
                 <div className="hidden md:block">
                   <a
                     className="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
-                    href="/register"
+                    href="/contact"
                   >
                     Get Started
                   </a>

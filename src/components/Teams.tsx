@@ -13,6 +13,7 @@ const Teams: React.FC = () => {
   };
 
   return (
+    
     <section className="py-12 lg:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center mb-12 md:mb-20 -mx-4">
@@ -103,7 +104,7 @@ const Teams: React.FC = () => {
           ].map((member, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden"
+              className="relative flex-shrink-0 w-full sm:w-98 h-full sm:h-130 mr-8 overflow-hidden"
             >
               <div className="absolute bottom-0 left-0 w-full p-4">
                 <div className="p-4 bg-white rounded-xl">
@@ -121,6 +122,7 @@ const Teams: React.FC = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 

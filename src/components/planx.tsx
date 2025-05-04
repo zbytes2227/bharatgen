@@ -23,9 +23,11 @@ const Plansx: React.FC = () => {
               Ideal for startups, this plan provides essential tools and IoT
               solutions to streamline operations and boost efficiency.
             </p>
-            <button className="relative z-10 bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
-              Get Started
-            </button>
+            <a href="/contact">
+              <button className="relative z-10 bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
+                Get Started
+              </button>
+            </a>
           </div>
           <div className="relative bg-white rounded-3xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
             <div className="absolute inset-0 bg-gradient-to-t from-cyan-50 to-transparent rounded-3xl opacity-50"></div>
@@ -37,9 +39,11 @@ const Plansx: React.FC = () => {
               systems and AI-powered tools for scalability and smarter
               decisions.
             </p>
-            <button className="relative z-10 bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
-              Get Started
-            </button>
+            <a href="/contact">
+              <button className="relative z-10 bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
+                Get Started
+              </button>
+            </a>
           </div>
           <div className="relative bg-white rounded-3xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
             <div className="absolute inset-0 bg-gradient-to-t from-teal-50 to-transparent rounded-3xl opacity-50"></div>
@@ -50,9 +54,11 @@ const Plansx: React.FC = () => {
               Designed for enterprises, this all-inclusive plan delivers
               full-stack development, IoT, and scalable cloud solutions.
             </p>
-            <button className="relative z-10 bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
-              Get Started
-            </button>
+            <a href="/contact">
+              <button className="relative z-10 bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
+                Get Started
+              </button>
+            </a>
           </div>
         </div>
       </div>

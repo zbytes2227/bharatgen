@@ -103,7 +103,7 @@ const Aboutteams: React.FC = () => {
           ].map((member, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden"
+              className="relative flex-shrink-0 w-full sm:w-96 h-full sm:h-128 mr-8 overflow-hidden"
             >
               <div className="absolute bottom-0 left-0 w-full p-4">
                 <div className="p-4 bg-white rounded-xl">

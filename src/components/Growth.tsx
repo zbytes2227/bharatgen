@@ -69,7 +69,7 @@ const Growth: React.FC = () => {
     <div className="bg-white">
       <div
         ref={sectionRef}
-        className="bg-gradient-to-br from-teal-700 to-teal-900 text-gray-800 p-8 rounded-3xl m-8 shadow-md"
+        className="bg-gradient-to-br from-teal-700 to-teal-900 text-gray-800 p-10 rounded-3xl m-8 shadow-md"
       >
         <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-center text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-lime-300">
           Company Growth over Year

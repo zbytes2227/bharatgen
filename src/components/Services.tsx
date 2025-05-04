@@ -2,7 +2,7 @@ import React from "react";
 
 const Services: React.FC = () => {
   return (
-    <section className="py-16 lg:py-32 bg-gradient-to-b from-teal-900 to-teal-700">
+    <section className="py-18 px-6 lg:py-32 bg-gradient-to-b from-teal-900 to-teal-700">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-lime-300">
@@ -58,18 +58,20 @@ const Services: React.FC = () => {
                     />
                   </svg>
                   <h5 className="text-gray-900 text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mt-6 mb-4 font-bold">
-                    Web Development
+                    Web & App Development
                   </h5>
                   <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                     We create attractive and fully functional websites tailored
-                    to your business needs, We offer custom software development
-                    solutions to streamline your business and Our websites are
-                    designed to be user-friendly and professional operations
-                    smoothly with our ERP solutions.
+                    to your business needs, Creating user-friendly mobile
+                    applications for iOS and Android to help you engage with
+                    your audience and Our websites are designed to be
+                    user-professional with our ERP solutions.
                   </p>
-                  <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
-                    Learn More
-                  </button>
+                  <a href="/services">
+                    <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
+                      Learn More
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -111,18 +113,20 @@ const Services: React.FC = () => {
                     <circle cx="24" cy="36" r="1" fill="#022C22" />
                   </svg>
                   <h5 className="text-gray-900 text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mt-6 mb-4 font-bold">
-                    App Development
+                    Software Development
                   </h5>
                   <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                    Our BharatGen Technologies build mobile and web applications
-                    that are easy to use, high-performing, and help drive
-                    business growth. Creating user-friendly mobile applications
-                    for iOS and Android to help you engage with your audience
-                    better.
+                    We offer custom software development solutions to streamline
+                    your business processes and improve efficiency. Our
+                    software solutions are designed to meet your specific needs and
+                    requirements.We are committed to ensure
+                    high-quality software development.
                   </p>
-                  <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
-                    Learn More
-                  </button>
+                  <a href="/services">
+                    <button className="bg-gradient-to-r from-teal-600 to-teal-500 mb-4 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
+                      Learn More
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -180,7 +184,7 @@ const Services: React.FC = () => {
                     <circle cx="36" cy="24" r="2" fill="#022C22" />
                   </svg>
                   <h5 className="text-gray-900 text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mt-6 mb-4 font-bold">
-                    IOT <br></br>Solutions 
+                    IOT <br></br>Solutions
                   </h5>
                   <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                     We offer advanced technology to enable communication and
@@ -188,9 +192,11 @@ const Services: React.FC = () => {
                     and more connected. We develop systems that automate regular
                     tasks, reduce manual effort, and improve productivity.
                   </p>
-                  <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
-                    Learn More
-                  </button>
+                  <a href="/contact">
+                    <button className="bg-gradient-to-r from-teal-600 to-teal-500 px-8 text-white text-md font-heading rounded-full px-6 py-3 mx-auto mt-6 block hover:from-teal-700 hover:to-teal-600 transition-all duration-300">
+                      Enquire
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

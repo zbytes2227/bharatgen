@@ -1,41 +1,87 @@
 "use client";
 import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 const Aboutteams: React.FC = () => {
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const teamMembers = [
+    {
+      name: "Ujjwal Kushwaha",
+      role: "Co-founder & Development Head",
+      img: "quantam-assets/team/photo-1.jpeg",
+    },
+    {
+      name: "Manash Mishra",
+      role: "CEO & Founder",
+      img: "quantam-assets/team/photo-2.jpeg",
+    },
+    {
+      name: "Pankaj Kesharwani",
+      role: "Co-founder & Management Head",
+      img: "quantam-assets/team/photo-3.jpg",
+    },
+    {
+      name: "Prince Yadav",
+      role: "Software Engineer",
+      img: "quantam-assets/team/photo.jpg",
+    },
+    {
+      name: "Anuj Tiwari",
+      role: "UI/UX Designer",
+      img: "quantam-assets/team/photo.jpg",
+    },
+    {
+      name: "Riddhi Jaiswal",
+      role: "IoT Specialist",
+      img: "quantam-assets/team/photo.jpg",
+    },
+    {
+      name: "Amar Chaubey",
+      role: "ERP Consultant",
+      img: "quantam-assets/team/photo.jpg",
+    },
+    {
+      name: "Subhash Sahu",
+      role: "Billing Software Specialist",
+      img: "quantam-assets/team/photo.jpg",
+    },
+  ];
 
   const handlePrevSlide = () => {
-    setActiveSlide(1);
+    setActiveSlide((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1));
   };
 
   const handleNextSlide = () => {
-    setActiveSlide(2);
+    setActiveSlide((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <section className="py-12 lg:py-24 overflow-hidden">
+    <section className="py-8 lg:py-16 overflow-hidden bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center mb-12 md:mb-20 -mx-4">
-          <div className="w-full md:w-1/2 px-4 mb-12 md:mb-0">
+        <div className="flex flex-wrap items-center mb-8 md:mb-16 -mx-4">
+          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <div>
-              <h1 className="font-heading text-5xl text-white mb-4">
-                Meet our experts
-              </h1>
-              <p className="text-white ">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-4">
+                Meet Our Excellence Team
+              </h2>
+              <p className="text-gray-700 text-sm sm:text-base">
                 Our dedicated team of industry-leading professionals brings deep
-                expertise in development, design, and strategy.
+                expertise in development, design, and strategy to empower the
+                new generation of Bharat.
               </p>
             </div>
           </div>
           <div className="w-full md:w-1/2 px-4">
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-end space-x-2">
               <button
-                className="inline-block text-gray-800 mr-1"
+                className="inline-block text-gray-800 p-2 hover:text-teal-600 transition-colors"
                 onClick={handlePrevSlide}
+                aria-label="Previous slide"
               >
                 <svg
-                  width="40"
-                  height="40"
+                  width="32"
+                  height="32"
                   viewBox="0 0 40 40"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,12 +101,13 @@ const Aboutteams: React.FC = () => {
                 </svg>
               </button>
               <button
-                className="inline-block text-black hover:text-lime-500"
+                className="inline-block text-black p-2 hover:text-teal-600 transition-colors"
                 onClick={handleNextSlide}
+                aria-label="Next slide"
               >
                 <svg
-                  width="40"
-                  height="40"
+                  width="32"
+                  height="32"
                   viewBox="0 0 40 40"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,36 +128,20 @@ const Aboutteams: React.FC = () => {
           </div>
         </div>
         <div
-          className="flex transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${(activeSlide - 1) * 100.5}%)` }}
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${activeSlide * (100 / 1.5)}%)` }}
         >
-          {[
-            {
-              name: "Ujjwal Kushwaha",
-              role: "Co-founder & Devlopment Head",
-              img: "quantam-assets/team/photo-1.jpeg",
-            },
-            {
-              name: "Manash Mishra",
-              role: "Ceo & Founder",
-              img: "quantam-assets/team/photo-2.jpeg",
-            },
-            {
-              name: "Pankaj Kesharwani",
-              role: "Co-founder & Management Head",
-              img: "quantam-assets/team/photo-3.jpg",
-            },
-          ].map((member, index) => (
+          {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-full sm:w-96 h-full sm:h-128 mr-8 overflow-hidden"
+              className="relative flex-shrink-0 w-[70vw] sm:w-64 md:w-72 h-80 sm:h-96 mr-4 sm:mr-6 overflow-hidden"
             >
-              <div className="absolute bottom-0 left-0 w-full p-4">
-                <div className="p-4 bg-white rounded-xl">
-                  <span className="block font-medium text-gray-900">
+              <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3">
+                <div className="p-2 sm:p-3 bg-white rounded-xl shadow-md">
+                  <span className="block font-medium text-gray-900 text-sm sm:text-base">
                     {member.name}
                   </span>
-                  <span className="text-sm text-gray-700">{member.role}</span>
+                  <span className="text-xs text-gray-700">{member.role}</span>
                 </div>
               </div>
               <img
@@ -121,6 +152,14 @@ const Aboutteams: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mt-12 text-center">
+        <a href="/contact">
+          <button className="bg-gradient-to-r from-teal-600 to-cyan-500 text-white rounded-full px-6 py-3 sm:px-8 sm:py-4 hover:scale-105 transition-transform duration-200 flex items-center mx-auto gap-2 shadow-lg text-sm sm:text-base">
+            Get a Free Consultation{" "}
+            <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+          </button>
+        </a>
       </div>
     </section>
   );

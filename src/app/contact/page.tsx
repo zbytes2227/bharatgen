@@ -131,8 +131,8 @@ export default function Contact() {
                 <div className="w-full lg:w-1/2 px-4">
                   <div className="lg:max-w-md lg:ml-auto h-full">
                     <img
-                      className="block w-full h-full"
-                      src="quantam-assets/contact/photo-1.png"
+                      className="block w-full h-full rounded-2xl"
+                      src="quantam-assets/headers/cont.jpeg"
                       alt=""
                     />
                   </div>

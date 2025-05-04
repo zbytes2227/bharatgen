@@ -9,9 +9,9 @@ import Reviews from "@/components/Reviews";
 import Image from "next/image";
 import Growth from "@/components/Growth";
 
+
 interface Popup {
   onClose: () => void;
-
 }
 
 /**
@@ -30,8 +30,10 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 backdrop-blur-sm">
-      <div className="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 sm:p-6 animate-pop-in">
+    
+    <div className="absolute inset-0 z-50 mt-[5vh] sm:mt-[10vh] md:mt-[15vh] lg:mt-[20vh] flex items-center justify-center bg-opacity-50 backdrop-blur-sm">
+     
+      <div className="w-full max-w-[90vw] sm:max-w-[500px] rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 sm:p-6 animate-pop-in">
         <div className="relative p-4 text-left">
           <button
             onClick={onClose}
@@ -51,17 +53,18 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </button>
           <h3 className="mb-5 text-2xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-yellow-900">
             Get In Touch
+          <br></br>
           </h3>
           <Image
-            alt="Free Camp Poster"
-            src="/images/freeCamp.jpg"
+            alt="poster"
+            src="/quantam-assets/headers/poster.jpeg"
             width={400}
             height={200}
             priority
-            className="w-full h-auto rounded-lg mb-4"
+            className="w-full h-auto rounded-xl mb-2"
           />
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div >
+            <div>
               <label
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-900 dark:text-white"
@@ -133,6 +136,7 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
       </div>
     </div>
+    
   );
 };
 
@@ -201,7 +205,7 @@ export default function Page() {
                 </a>
                 <a
                   className="mb-12 inline-flex items-center justify-center rounded-full border border-teal-900 px-6 py-4 text-lg font-medium text-black transition duration-200 hover:bg-teal-900 hover:text-white"
-                  href="#"
+                  href="https://linktr.ee/BharatGen"
                   onClick={() => setIsPopupOpen(true)}
                 >
                   Get in touch

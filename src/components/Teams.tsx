@@ -2,41 +2,59 @@
 import React, { useState } from "react";
 
 const Teams: React.FC = () => {
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const teamMembers = [
+    {
+      name: "Ujjwal Kushwaha",
+      role: "Co-founder & Devlopment Head",
+      img: "quantam-assets/team/photo-1.jpeg",
+    },
+    {
+      name: "Manash Mishra",
+      role: "Ceo & Founder",
+      img: "quantam-assets/team/photo-2.jpeg",
+    },
+    {
+      name: "Pankaj Kesharwani",
+      role: "Co-founder & Management Head",
+      img: "quantam-assets/team/photo-3.jpg",
+    },
+  ];
 
   const handlePrevSlide = () => {
-    setActiveSlide(1);
+    setActiveSlide((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1));
   };
 
   const handleNextSlide = () => {
-    setActiveSlide(2);
+    setActiveSlide((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    
-    <section className="py-12 lg:py-24 overflow-hidden">
+    <section className="py-8 lg:py-16 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center mb-12 md:mb-20 -mx-4">
-          <div className="w-full md:w-1/2 px-4 mb-12 md:mb-0">
+        <div className="flex flex-wrap items-center mb-8 md:mb-16 -mx-4">
+          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <div>
-              <h1 className="font-heading text-gray-900 text-4xl md:text-5xl sm:text-6xl mb-4">
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl text-gray-900 mb-4">
                 Meet our experts
               </h1>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-sm sm:text-base">
                 Our dedicated team of industry-leading professionals brings deep
                 expertise in development, design, and strategy.
               </p>
             </div>
           </div>
           <div className="w-full md:w-1/2 px-4">
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-end space-x-2">
               <button
-                className="inline-block text-gray-800 mr-1"
+                className="inline-block text-gray-800 p-2 hover:text-teal-600 transition-colors"
                 onClick={handlePrevSlide}
+                aria-label="Previous slide"
               >
                 <svg
-                  width="40"
-                  height="40"
+                  width="32"
+                  height="32"
                   viewBox="0 0 40 40"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,12 +74,13 @@ const Teams: React.FC = () => {
                 </svg>
               </button>
               <button
-                className="inline-block text-black hover:text-lime-500"
+                className="inline-block text-black p-2 hover:text-teal-600 transition-colors"
                 onClick={handleNextSlide}
+                aria-label="Next slide"
               >
                 <svg
-                  width="40"
-                  height="40"
+                  width="32"
+                  height="32"
                   viewBox="0 0 40 40"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,34 +101,22 @@ const Teams: React.FC = () => {
           </div>
         </div>
         <div
-          className="flex transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${(activeSlide - 1) * 100.5}%)` }}
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${activeSlide * (100 / 1.5)}%)` }}
         >
-          {[
-            {
-              name: "Ujjwal Kushwaha",
-              role: "Co-founder & Devlopment Head",
-              img: "quantam-assets/team/photo-1.jpeg",
-            },
-            {
-              name: "Manash Mishra",
-              role: "Ceo & Founder",
-              img: "quantam-assets/team/photo-2.jpeg",
-            },
-            {
-              name: "Pankaj Kesharwani",
-              role: "Co-founder & Management Head",
-              img: "quantam-assets/team/photo-3.jpg",
-            },
-          ].map((member, index) => (
+          {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-full sm:w-98 h-full sm:h-130 mr-8 overflow-hidden"
+              className="relative flex-shrink-0 w-[70vw] sm:w-80 md:w-96 h-80 sm:h-96 md:h-[28rem] mr-4 sm:mr-6 overflow-hidden"
             >
-              <div className="absolute bottom-0 left-0 w-full p-4">
-                <div className="p-4 bg-white rounded-xl">
-                  <span className="block font-medium text-gray-900">{member.name}</span>
-                  <span className="text-sm text-gray-700">{member.role}</span>
+              <div className="absolute bottom-0 left-0 w-full p-2 sm:p-4">
+                <div className="p-2 sm:p-4 bg-white rounded-xl shadow-md">
+                  <span className="block font-medium text-gray-900 text-sm sm:text-base">
+                    {member.name}
+                  </span>
+                  <span className="text-xs sm:text-sm text-gray-700">
+                    {member.role}
+                  </span>
                 </div>
               </div>
               <img
@@ -122,7 +129,6 @@ const Teams: React.FC = () => {
         </div>
       </div>
     </section>
-    
   );
 };
 

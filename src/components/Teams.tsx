@@ -7,17 +7,17 @@ const Teams: React.FC = () => {
   const teamMembers = [
     {
       name: "Ujjwal Kushwaha",
-      role: "Co-founder & Devlopment Head",
+      role: "Co-Founder & CTO",
       img: "quantam-assets/team/photo-1.jpeg",
     },
     {
       name: "Manash Mishra",
-      role: "Ceo & Founder",
+      role: "Founder & CEO",
       img: "quantam-assets/team/photo-2.jpeg",
     },
     {
       name: "Pankaj Kesharwani",
-      role: "Co-founder & Management Head",
+      role: "Co-Founder & CMO",
       img: "quantam-assets/team/photo-3.jpg",
     },
   ];
@@ -101,7 +101,7 @@ const Teams: React.FC = () => {
           </div>
         </div>
         <div
-          className="flex transition-transform duration-700 ease-in-out"
+          className="flex transition-transform md:justify-center duration-700 ease-in-out"
           style={{ transform: `translateX(-${activeSlide * (100 / 1.5)}%)` }}
         >
           {teamMembers.map((member, index) => (

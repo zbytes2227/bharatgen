@@ -45,45 +45,6 @@ const ProjectCards: React.FC = () => {
         </div>
       </div>
 
-      {/* Samrat PathLabs App & Website Card */}
-      <div className="bg-white rounded-xl shadow-xl p-8 mb-10 w-full max-w-4xl transform transition-all hover:scale-105 hover:shadow-2xl">
-        <h2 className="text-3xl font-bold text-teal-600 mb-5">
-          Samrat PathLabs App & Website
-        </h2>
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Left Section: Features */}
-          <div className="flex-1">
-            <ul className="list-disc list-inside text-gray-700 space-y-3">
-              <li>Dynamic Site and App on Playstore</li>
-              <li>Advanced Admin Panel</li>
-              <li>Login for Admin, Staff & Customer</li>
-              <li>OTP Verification</li>
-              <li>Product Listing & Cart System</li>
-              <li>Notification & SEO</li>
-            </ul>
-          </div>
-          {/* Right Section: QR Code Placeholder */}
-          <div className="flex-shrink-0">
-            <div className="w-28 h-28 bg-gradient-to-r from-green-100 to-green-200 flex items-center justify-center rounded-lg">
-              <img
-                src="/quantam-assets/QR Codes/Samrath Path Labs.png"
-                alt="QR Code"
-              />
-            </div>
-          </div>
-        </div>
-        {/* Image Placeholders */}
-        <div className="mt-8 flex gap-6">
-          <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
-            <img
-              src="/quantam-assets/Project images/Samrath Path Labs.png"
-              alt="website"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Agni Accessories ERP System Card */}
       <div className="bg-white rounded-xl shadow-xl p-8 mb-10 w-full max-w-4xl transform transition-all hover:scale-105 hover:shadow-2xl">
         <h2 className="text-3xl font-bold text-blue-600 mb-5">
@@ -159,6 +120,45 @@ const ProjectCards: React.FC = () => {
         </div>
       </div>
 
+      {/* Mahi Tours & Travels-Travel Website Card */}
+      <div className="bg-white rounded-xl shadow-xl p-8 mb-10 w-full max-w-4xl transform transition-all hover:scale-105 hover:shadow-2xl">
+        <h2 className="text-3xl font-bold text-teal-600 mb-5">
+          Mahi Tours & Travels-Travel Website
+        </h2>
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Left Section: Features */}
+          <div className="flex-1">
+            <ul className="list-disc list-inside text-gray-700 space-y-3">
+              <li>Dynamic Site</li>
+              <li>Real-Time Booking Update</li>
+              <li>Vehicle & Driver Assignment System</li>
+              <li>Notification via Email</li>
+              <li>Image Gallery for Destinations</li>
+              <li>Best User Experience</li>
+            </ul>
+          </div>
+          {/* Right Section: QR Code Placeholder */}
+          <div className="flex-shrink-0">
+            <div className="w-28 h-28 bg-gradient-to-r from-green-100 to-green-200 flex items-center justify-center rounded-lg">
+              <img
+                src="/quantam-assets/QR Codes/Mahi Tour & Travel.png"
+                alt="QR Code"
+              />
+            </div>
+          </div>
+        </div>
+        {/* Image Placeholders */}
+        <div className="mt-8 flex gap-6">
+          <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
+            <img
+              src="/quantam-assets/Project images/Mahi Tour & Travel.png"
+              alt="website"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* ROBOX - Ecommerce store Card */}
       <div className="bg-white rounded-xl shadow-xl p-8 mb-10 w-full max-w-4xl transform transition-all hover:scale-105 hover:shadow-2xl">
         <h2 className="text-3xl font-bold text-blue-600 mb-5">
@@ -187,6 +187,45 @@ const ProjectCards: React.FC = () => {
           <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
             <img
               src="/quantam-assets/Project images/Robox.png"
+              alt="website"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Samrat PathLabs App & Website Card */}
+      <div className="bg-white rounded-xl shadow-xl p-8 mb-10 w-full max-w-4xl transform transition-all hover:scale-105 hover:shadow-2xl">
+        <h2 className="text-3xl font-bold text-teal-600 mb-5">
+          Samrat PathLabs App & Website
+        </h2>
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Left Section: Features */}
+          <div className="flex-1">
+            <ul className="list-disc list-inside text-gray-700 space-y-3">
+              <li>Dynamic Site and App on Playstore</li>
+              <li>Advanced Admin Panel</li>
+              <li>Login for Admin, Staff & Customer</li>
+              <li>OTP Verification</li>
+              <li>Product Listing & Cart System</li>
+              <li>Notification & SEO</li>
+            </ul>
+          </div>
+          {/* Right Section: QR Code Placeholder */}
+          <div className="flex-shrink-0">
+            <div className="w-28 h-28 bg-gradient-to-r from-green-100 to-green-200 flex items-center justify-center rounded-lg">
+              <img
+                src="/quantam-assets/QR Codes/Samrath Path Labs.png"
+                alt="QR Code"
+              />
+            </div>
+          </div>
+        </div>
+        {/* Image Placeholders */}
+        <div className="mt-8 flex gap-6">
+          <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
+            <img
+              src="/quantam-assets/Project images/Samrath Path Labs.png"
               alt="website"
               className="w-full h-full object-contain"
             />
@@ -294,7 +333,7 @@ const ProjectCards: React.FC = () => {
         <div className="mt-8 flex gap-6">
           <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
             <img
-              src="/quantam-assets/Project images/Code Crafters Community.png"
+              src="/quantam-assets/Project images/Code crafters Community.png"
               alt="website"
               className="w-full h-full object-contain"
             />
@@ -337,45 +376,6 @@ const ProjectCards: React.FC = () => {
           <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
             <img
               src="/quantam-assets/Project images/Sonu Sir Classes.png"
-              alt="website"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Mahi Tours & Travels-Travel Website Card */}
-      <div className="bg-white rounded-xl shadow-xl p-8 mb-10 w-full max-w-4xl transform transition-all hover:scale-105 hover:shadow-2xl">
-        <h2 className="text-3xl font-bold text-teal-600 mb-5">
-          Mahi Tours & Travels-Travel Website
-        </h2>
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Left Section: Features */}
-          <div className="flex-1">
-            <ul className="list-disc list-inside text-gray-700 space-y-3">
-              <li>Dynamic Site</li>
-              <li>Real-Time Booking Update</li>
-              <li>Vehicle & Driver Assignment System</li>
-              <li>Notification via Email</li>
-              <li>Image Gallery for Destinations</li>
-              <li>Best User Experience</li>
-            </ul>
-          </div>
-          {/* Right Section: QR Code Placeholder */}
-          <div className="flex-shrink-0">
-            <div className="w-28 h-28 bg-gradient-to-r from-green-100 to-green-200 flex items-center justify-center rounded-lg">
-              <img
-                src="/quantam-assets/QR Codes/Mahi Tour & Travel.png"
-                alt="QR Code"
-              />
-            </div>
-          </div>
-        </div>
-        {/* Image Placeholders */}
-        <div className="mt-8 flex gap-6">
-          <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
-            <img
-              src="/quantam-assets/Project images/Mahi Tour & Travel.png"
               alt="website"
               className="w-full h-full object-contain"
             />

@@ -10,19 +10,19 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    name: "Sarah Johnson",
+    name: "Principal, FGP Raebareli",
     rating: 5,
-    text: "This platform has transformed our business operations! The tools are intuitive, and the support team is exceptional.",
+    text: "We've been using their services for over two years, and the experience has been excellent. Reliable and consistently high-quality support!",
   },
   {
-    name: "Michael Chen",
+    name: "Aim Academy, Raebareli",
+    rating: 5,
+    text: "The Attedx machine has been a game-changer. It seamlessly transitioned our attendance system to digital and improved accuracy.",
+  },
+  {
+    name: "Agni Accessories",
     rating: 4,
-    text: "A fantastic solution for scaling our startup. The advanced features helped us stay competitive in a tough market.",
-  },
-  {
-    name: "Emily Davis",
-    rating: 5,
-    text: "The premium plan is worth every penny. Seamless integration and powerful analytics have boosted our efficiency.",
+    text: "Their ERP system has streamlined our operations and improved inventory management significantly. Thank you for the support!",
   },
 ];
 

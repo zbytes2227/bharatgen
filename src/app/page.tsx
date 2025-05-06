@@ -9,7 +9,6 @@ import Reviews from "@/components/Reviews";
 import Image from "next/image";
 import Growth from "@/components/Growth";
 
-
 interface Popup {
   onClose: () => void;
 }
@@ -21,23 +20,49 @@ interface Popup {
  * @param {() => void} props.onClose - Function to close the popup.
  * @returns {React.ReactElement} The popup component.
  */
+
 const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add form submission logic here (e.g., API call)
-    console.log("Form submitted");
-    onClose(); // Close popup after submission
+
+    const payload = {
+      name,
+      phone,
+      email: "",
+      message: "",
+      category: "from_popup",
+    };
+
+    try {
+      const response = await fetch("/api/contactus", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully");
+        onClose(); // Close popup after submission
+      } else {
+        console.error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+    }
   };
 
   return (
-    
     <div className="absolute inset-0 z-50 mt-[5vh] sm:mt-[10vh] md:mt-[15vh] lg:mt-[20vh] flex items-center justify-center bg-opacity-50 backdrop-blur-sm">
-     
-      <div className="w-full max-w-[90vw] sm:max-w-[500px] rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 sm:p-6 animate-pop-in">
+      <div className="w-full max-w-[90vw] sm:max-w-[500px] rounded-2xl border border-gray-200 bg-white p-4 shadow-sm drk:border-gray-700 sm:p-6 animate-pop-in">
         <div className="relative p-4 text-left">
           <button
             onClick={onClose}
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 drk:text-gray-400 drk:hover:text-gray-200"
             aria-label="Close modal"
           >
             <svg
@@ -53,7 +78,7 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </button>
           <h3 className="mb-5 text-2xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-yellow-900">
             Get In Touch
-          <br></br>
+            <br></br>
           </h3>
           <Image
             alt="poster"
@@ -67,37 +92,45 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-900 dark:text-white"
+                className="block text-sm font-medium text-gray-900 drk:text-white"
               >
                 Your Name:
               </label>
               <input
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
                 type="text"
                 placeholder="Your Full Name"
                 id="name"
                 required
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-md text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-md text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-blue-500 drk:border-gray-600 drk:bg-gray-700 drk:text-white drk:placeholder:text-gray-400 drk:focus:border-blue-500 drk:focus:ring-blue-500"
               />
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-900 dark:text-white"
+                className="block text-sm font-medium text-gray-900 drk:text-white"
               >
                 Phone Number:
               </label>
               <input
+                value={phone}
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                }}
                 type="tel"
                 placeholder="+91 91258870XXX"
                 id="phone"
                 inputMode="numeric"
                 pattern="[0-9]*"
                 required
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-md text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-md text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-blue-500 drk:border-gray-600 drk:bg-gray-700 drk:text-white drk:placeholder:text-gray-400 drk:focus:border-blue-500 drk:focus:ring-blue-500"
               />
             </div>
             <div>
               <button
                 type="submit"
-                className="flex mt-6 w-full items-center justify-center rounded-xl bg-gradient-to-r from-teal-800 to-blue-900 px-5 py-2.5 text-md font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="flex mt-6 w-full items-center justify-center rounded-xl bg-gradient-to-r from-teal-800 to-blue-900 px-5 py-2.5 text-md font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 drk:hover:bg-blue-700 drk:focus:ring-blue-800"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,31 +145,11 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 </svg>
                 Submit
               </button>
-              <a
-                href="tel:+918009859657"
-                className="mt-2 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-teal-800 to-blue-900 px-5 py-2.5 text-md font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="me-3 bi bi-telephone-outbound-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"
-                  />
-                </svg>
-                Call to be Connected
-              </a>
             </div>
           </form>
         </div>
       </div>
     </div>
-    
   );
 };
 
@@ -170,14 +183,14 @@ export default function Page() {
             </span>
           </div>
           <Image
-            className="hidden md:block absolute z-10 top-0 left-0 mt-28 w-32 lg:w-64 xl:w-80"
+            className="hidden md:block absolute z-10 top-0 left-0 mt-28 w-32 lg:w-64 xl:w-80 opacity-50"
             src="/quantam-assets/headers/header-3.png"
             alt="Technology innovation"
             width={256}
             height={256}
           />
           <Image
-            className="hidden md:block absolute z-10 top-0 right-0 mt-20 w-32 lg:w-64 xl:w-80"
+            className="hidden md:block absolute z-10 top-0 right-0 mt-20 w-32 lg:w-64 xl:w-80 opacity-70"
             src="/quantam-assets/headers/header-4.png"
             alt="Digital solutions"
             width={256}
@@ -190,7 +203,7 @@ export default function Page() {
                 Empowering The New Generation of Bharat
               </h1>
               <p className="mb-10 text-lg text-gray-700">
-                BharatGEN is a technology startup focused on empowering the new
+                BharatGen is a technology startup focused on empowering the new
                 generation of Bharat by providing modern, scalable, and useful
                 digital solutions. We offer a range of services designed to
                 support businesses, startups, and individuals in their digital
@@ -201,14 +214,14 @@ export default function Page() {
                   className="mb-3 inline-flex items-center justify-center rounded-full border border-teal-900 bg-gradient-to-r from-teal-700 to-teal-900 px-6 py-4 text-lg font-medium text-white transition duration-200 hover:border-gray-800 hover:bg-gradient-to-r hover:from-gray-800 hover:to-gray-900 sm:mb-12 sm:mr-4"
                   href="/services"
                 >
-                  See our solutions
+                  See our Solutions
                 </a>
                 <a
                   className="mb-12 inline-flex items-center justify-center rounded-full border border-teal-900 px-6 py-4 text-lg font-medium text-black transition duration-200 hover:bg-teal-900 hover:text-white"
-                  href="https://linktr.ee/BharatGen"
+                  href="https://drive.google.com/file/d/1zoDYVZ0_Sla6TEzaoTJ4sB_iCmRcWzDY/view"
                   onClick={() => setIsPopupOpen(true)}
                 >
-                  Get in touch
+                  Download Brochure
                 </a>
               </div>
             </div>

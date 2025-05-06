@@ -37,13 +37,6 @@ export default async function handler(req, res) {
     });
   }
 
-  if (!message || message.trim().length < 10 || message.trim().length > 1000) {
-    return res.status(400).json({
-      success: false,
-      message: "Message must be between 10 and 1000 characters.",
-    });
-  }
-
   // === Prepare data to send to Google Apps Script ===
   const payload = {
     name,
@@ -54,7 +47,8 @@ export default async function handler(req, res) {
   };
 
   try {
-    const scriptResponse = await fetch(process.env.GOOGLE_SHEETS_WEBHOOK_URL,
+    const scriptResponse = await fetch(
+      "https://script.google.com/macros/s/AKfycbx8jEscjWydezE6pmzhVTBpfzNWCqF7MAp5RpX1BUzOmkE2oSy_NIHpboftEZBMSuYnpg/exec",
       {
         method: "POST",
         headers: {

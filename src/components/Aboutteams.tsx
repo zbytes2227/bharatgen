@@ -1,10 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { ArrowRight } from "lucide-react";
 
 const Aboutteams: React.FC = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-
   const teamMembers = [
     {
       name: "Ujjwal Kushwaha",
@@ -24,37 +22,29 @@ const Aboutteams: React.FC = () => {
     {
       name: "Prince Yadav",
       role: "Software Engineer",
-      img: "quantam-assets/team/photo.jpg",
+      img: "quantam-assets/team/prince.jpg",
     },
     {
       name: "Anuj Tiwari",
       role: "UI/UX Designer",
-      img: "quantam-assets/team/photo.jpg",
+      img: "quantam-assets/team/anuj.png",
     },
     {
       name: "Riddhi Jaiswal",
       role: "IoT Specialist",
-      img: "quantam-assets/team/photo.jpg",
+      img: "quantam-assets/team/riddhi.jpg",
     },
     {
       name: "Amar Chaubey",
       role: "ERP Consultant",
-      img: "quantam-assets/team/photo.jpg",
+      img: "quantam-assets/team/amar.jpg",
     },
     {
       name: "Subhash Sahu",
       role: "Billing Software Specialist",
-      img: "quantam-assets/team/photo.jpg",
+      img: "quantam-assets/team/subhash.jpg",
     },
   ];
-
-  const handlePrevSlide = () => {
-    setActiveSlide((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1));
-  };
-
-  const handleNextSlide = () => {
-    setActiveSlide((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1));
-  };
 
   return (
     <section className="py-8 lg:py-16 overflow-hidden bg-white">
@@ -72,76 +62,19 @@ const Aboutteams: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/2 px-4">
-            <div className="flex items-center justify-end space-x-2">
-              <button
-                className="inline-block text-gray-800 p-2 hover:text-teal-600 transition-colors"
-                onClick={handlePrevSlide}
-                aria-label="Previous slide"
-              >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g opacity="0.4">
-                    <path
-                      d="M17.5 29.1667L8.33333 20.0001L17.5 10.8334"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                    <path
-                      d="M8.33329 20L31.6666 20"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                  </g>
-                </svg>
-              </button>
-              <button
-                className="inline-block text-black p-2 hover:text-teal-600 transition-colors"
-                onClick={handleNextSlide}
-                aria-label="Next slide"
-              >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22.5 10.8333L31.6667 19.9999L22.5 29.1666"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                  <path
-                    d="M31.6666 20H8.33331"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
         </div>
-        <div
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{ transform: `translateX(-${activeSlide * (100 / 1.5)}%)` }}
-        >
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-[70vw] sm:w-64 md:w-72 h-80 sm:h-96 mr-4 sm:mr-6 overflow-hidden"
+              className="relative w-full h-48 sm:h-[55vh] overflow-hidden"
             >
-              <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3">
-                <div className="p-2 sm:p-3 bg-white rounded-xl shadow-md">
-                  <span className="block font-medium text-gray-900 text-sm sm:text-base">
+              <div className="absolute bottom-0 left-0 w-full p-2">
+                <div className="p-1.5 text-center bg-white rounded-xl shadow-md">
+                  <span className="block font-medium text-gray-900 text-xs">
                     {member.name}
                   </span>
-                  <span className="text-xs text-gray-700">{member.role}</span>
+                  {/* <span className="text-xs text-gray-700">{member.role}</span> */}
                 </div>
               </div>
               <img

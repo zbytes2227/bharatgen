@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 
-
 /**
  * Header component that displays the logo and navigation links.
  *
- * @returns {React.ReactElement} 
+ * @returns {React.ReactElement}
  */
 export default function Header(): React.ReactElement {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
@@ -51,6 +50,22 @@ export default function Header(): React.ReactElement {
                     href="/projects"
                   >
                     Projects
+                  </a>
+                </li>
+                <li className="mr-8">
+                  <a
+                    className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                    href="/careers"
+                  >
+                    Careers
+                  </a>
+                </li>
+                <li className="mr-8">
+                  <a
+                    className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                    href="/community"
+                  >
+                    Community
                   </a>
                 </li>
                 <li>
@@ -110,7 +125,6 @@ export default function Header(): React.ReactElement {
           </div>
         </nav>
 
-
         {/* Mobile Menu */}
         <div
           className={`fixed top-0 left-0 bottom-0 w-full xs:w-5/6 xs:max-w-md z-50 overflow-y-auto ${
@@ -124,11 +138,7 @@ export default function Header(): React.ReactElement {
           <nav className="relative flex flex-col py-7 px-10 w-full h-full bg-white overflow-y-auto">
             <div className="flex items-center justify-between">
               <a className="inline-block" href="/ ">
-                <img
-                  className="h-8"
-                  src="/images/logo.png"
-                  alt="Bharat Gen"
-                />
+                <img className="h-8" src="/images/logo.png" alt="Bharat Gen" />
               </a>
               <div className="flex items-center">
                 <a
@@ -190,6 +200,22 @@ export default function Header(): React.ReactElement {
                     href="/projects"
                   >
                     Projects
+                  </a>
+                </li>
+                <li className="mb-6">
+                  <a
+                    className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                    href="/careers"
+                  >
+                    Careers
+                  </a>
+                </li>
+                <li className="mb-6">
+                  <a
+                    className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                    href="/community"
+                  >
+                    Community
                   </a>
                 </li>
                 <li>

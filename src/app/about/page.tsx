@@ -155,7 +155,7 @@ const AboutPage: React.FC = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <Mail className="h-5 w-5 text-teal-600" />
-                      <a href="mailto:info@bharatgen.com">
+                      <a href="mailto:connect.bharatgen@gmail.com">
                         connect.bharatgen@gmail.com
                       </a>
                     </li>

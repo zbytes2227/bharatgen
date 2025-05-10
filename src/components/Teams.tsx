@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Teams: React.FC = () => {
+  const router = useRouter();
   const [activeSlide, setActiveSlide] = useState(0);
 
   const teamMembers = [
@@ -9,16 +11,19 @@ const Teams: React.FC = () => {
       name: "Ujjwal Kushwaha",
       role: "Co-Founder & CTO",
       img: "quantam-assets/team/photo-1.jpeg",
+      link: "https://www.linkedin.com/in/ujjwal-kushwaha-zbyte/",
     },
     {
       name: "Manash Mishra",
       role: "Founder & CEO",
       img: "quantam-assets/team/photo-2.jpeg",
+      link: "https://www.linkedin.com/in/manash-mishra-918542221/",
     },
     {
       name: "Pankaj Kesharwani",
       role: "Co-Founder & CMO",
       img: "quantam-assets/team/photo-3.jpg",
+      link: "https://www.linkedin.com/in/pankaj-k-52654723a/",
     },
   ];
 
@@ -106,6 +111,7 @@ const Teams: React.FC = () => {
         >
           {teamMembers.map((member, index) => (
             <div
+              onClick={() => router.push(member.link)}
               key={index}
               className="relative flex-shrink-0 w-[70vw] sm:w-80 md:w-96 h-80 sm:h-96 md:h-[28rem] mr-4 sm:mr-6 overflow-hidden"
             >

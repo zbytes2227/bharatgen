@@ -16,7 +16,7 @@ export default function Header(): React.ReactElement {
         <nav className="py-3">
           <div className="container mx-auto px-4">
             <div className="relative flex items-center justify-between">
-              <a className="inline-block" href="/ ">
+              <a className="inline-block justify-start" href="/ ">
                 <img src="/images/logo.png" alt="Bharat Gen" className="h-18" />
               </a>
               <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
@@ -68,7 +68,7 @@ export default function Header(): React.ReactElement {
                     Community
                   </a>
                 </li>
-                <li>
+                <li className="mr-8">
                   <a
                     className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                     href="/contact"
@@ -218,7 +218,7 @@ export default function Header(): React.ReactElement {
                     Community
                   </a>
                 </li>
-                <li>
+                <li className="mb-6">
                   <a
                     className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                     href="/contact"

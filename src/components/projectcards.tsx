@@ -326,7 +326,7 @@ const ProjectCards: React.FC = () => {
         <div className="mt-8 flex gap-6">
           <div className="w-full max-h-64 rounded-lg overflow-hidden transition-transform">
             <img
-              src="/quantam-assets/Project images/Code Crafters Community.png"
+              src="/quantam-assets/Project images/Code crafters Community.png"
               alt="website"
               className="w-full h-full object-contain"
             />

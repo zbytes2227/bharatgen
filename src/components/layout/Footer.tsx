@@ -44,7 +44,7 @@ export default function Footer(): React.ReactElement {
                   <span className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-lime-500 to-teal-500"></span>
                 </h3>
                 <ul>
-                  <li className="mb-4">
+                  <li className="mb-2">
                     <a
                       className="inline-block text-gray-600 font-medium relative group transition duration-300"
                       href="https://www.instagram.com/bharatgen/"
@@ -53,7 +53,7 @@ export default function Footer(): React.ReactElement {
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-500 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-2">
                     <a
                       className="inline-block text-gray-600 font-medium relative group transition duration-300"
                       href="https://www.linkedin.com/company/bharatgen-technologie/"
@@ -62,7 +62,25 @@ export default function Footer(): React.ReactElement {
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-500 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                   </li>
-                  <li>
+                         <li className="mb-2">
+                    <a
+                      className="inline-block text-gray-600 font-medium relative group transition duration-300"
+                      href="https://pin.it/5Kw2NHNKJ"
+                    >
+                      Pinterest
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                  </li>
+                             <li className="mb-2">
+                    <a
+                      className="inline-block text-gray-600 font-medium relative group transition duration-300"
+                      href="https://x.com/BharatGenTech"
+                    >
+                      Twitter
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                  </li>
+                    <li className="mb-2">
                     <a
                       className="inline-block text-gray-600 font-medium relative group transition duration-300"
                       href="https://linktr.ee/BharatGen"

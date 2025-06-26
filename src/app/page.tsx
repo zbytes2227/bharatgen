@@ -82,7 +82,7 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </h3>
           <Image
             alt="poster"
-            src="/quantam-assets/headers/poster2.jpeg"
+            src="/quantam-assets/headers/poster3.jpg"
             width={400}
             height={200}
             priority
